@@ -29,7 +29,6 @@ Um portfolio profissional moderno e responsivo que inclui:
 - Layout responsivo e moderno
 - Rotas dinâmicas para posts do blog
 - Componentes reutilizáveis
-- Integração com Vercel para deploy
 
 ## 🚀 Como Executar
 
@@ -56,9 +55,6 @@ O blog inclui artigos sobre:
 ## 🤝 Agradecimentos
 
 Agradeço a todos que compareçeram durante o meetup Dev Paraná 🫂
-## 📄 Licença
-
-Este projeto está sob a licença MIT.
 
 ---
 Desenvolvido com 💚 durante o meetup Dev Paraná
