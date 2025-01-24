@@ -1,31 +1,29 @@
 <template>
   <div class="min-h-screen bg-gray-50 py-16">
-    <div class="w-full max-w-4xl mx-auto px-4">
+    <div class="w-full max-w-4xl mx-auto px-6 sm:px-8">
       <router-link 
         to="/blog" 
-        class="inline-flex items-center text-primary hover:text-secondary mb-8"
+        class="inline-flex items-center text-primary hover:text-secondary mb-8 text-lg font-medium"
       >
-        <ArrowLeftIcon class="w-4 h-4 mr-2" />
+        <ArrowLeftIcon class="w-5 h-5 mr-2" />
         Back to Blog
       </router-link>
 
       <article v-if="post" class="bg-white rounded-lg shadow-lg overflow-hidden">
-        <div class="aspect-w-16 aspect-h-9 bg-gray-100 flex items-center justify-center">
+        <div class="aspect-w-16 aspect-h-9 bg-gray-100 flex items-center justify-center mb-8 rounded-lg p-8">
           <component 
             :is="post.icon" 
-            size="96" 
+            size="128" 
             class="text-primary" 
           />
         </div>
         <div class="p-8">
-          <div class="flex items-center text-sm text-gray-500 mb-4">
-            <CalendarIcon class="w-4 h-4 mr-2" />
+          <h1 class="text-4xl font-bold text-gray-900 mb-8">{{ post.title }}</h1>
+          <div class="flex items-center text-gray-500 mb-8 text-lg">
+            <CalendarIcon class="w-6 h-6 mr-2" />
             {{ post.date }}
           </div>
-          <h1 class="text-4xl font-bold text-gray-900 mb-6">{{ post.title }}</h1>
-          <div class="prose prose-lg max-w-none">
-            <div v-html="post.content"></div>
-          </div>
+          <div class="prose prose-lg max-w-none" v-html="post.content"></div>
         </div>
       </article>
 
